@@ -199,6 +199,9 @@ Forf.prototype.parse = function() {
                 }
                 i = parseTokensAt(i, dststack);
             }
+            if (tokens[i] != "}") {
+                throw "missing closing brace";
+            }
             stack.push(dststack.reverse());
         } else {
             // replace numbers with actual numbers
