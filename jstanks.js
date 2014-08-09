@@ -74,6 +74,9 @@ var MEMORY_SIZE = 10;
 
 var Forf = function() {
     this.mem = new Object();
+    for (var i = 0; i < MEMORY_SIZE; i++) {
+        this.mem[i] = 0;
+    }
     this.builtins = new Object();
 
     this.builtins["debug!"] = function(myforf) { document.getElementById('debug').innerHTML = myforf.popData(); };
